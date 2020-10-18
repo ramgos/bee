@@ -15,7 +15,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if bidentifier.match(message.content.lower()):
+    if bidentifier.search(message.content.lower()):
         rem = len(beemovie) % 2000
         reps = len(beemovie) / 2000
         reps = math.floor(reps)
